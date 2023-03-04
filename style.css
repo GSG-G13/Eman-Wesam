@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+/* .main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+} */
+
 .todo-container .add-task input[type="text"] {
   width: 20rem;
   line-height: 2.5;
@@ -14,12 +21,17 @@
   font-size: 18px;
 }
 
-.todo-container .parent_task {
-  background: linear-gradient(-225deg, #a8bfff 0%, #884d80 100%);
+.todo-container .parent-task {
+  background-image: url("imgs/sticky-note.jpg");
+  /* background: linear-gradient(-225deg, #a8bfff 0%, #884d80 100%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .todo-container .header {
-  color: white;
+  color: #884d80;
   padding: 23px;
   margin-bottom: -21px;
 }
@@ -46,14 +58,26 @@
   transition: transform 0.3s;
 }
 
-span.no-tasks-message {
+span.task-content {
   display: block;
   padding: 15px;
   color: black;
   font-size: 19px;
 }
 
-.todo-container .tasks-content {
+.fa-solid, .fas {
+  font-weight: 900;
+  color: rebeccapurple;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* .fa-solid.fa-trash {
+  color: #962626;
+} */
+
+
+.todo-container .task {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,31 +87,58 @@ span.no-tasks-message {
   display: hidden;
 }
 
-svg.svg-inline--fa.fa-pen.edit {
-  margin-left: 11px;
-  color: rebeccapurple;
-  cursor: pointer;
-}
-
-.todo-container .icons {
+.todo-container .actions {
   font-size: 23px;
 }
 
-svg.svg-inline--fa.fa-trash.delete {
-  color: #e91e63;
-  cursor: pointer;
+.tasks-stats-count {
+  font-size: 20px;
 }
 
-.task-stats .tasks-count span {
+.tasks-stats-count span {
   color: #fff;
   padding: 1px 5px;
-  font-size: 10px;
+  font-size: 14px;
   border-radius: 4px;
   font-weight: bold;
   background-color: #e91e63;
 }
 
-.task-stats {
+.tasks-stats {
   padding-left: 23px;
   padding-top: 23px;
+}
+
+@media screen and (min-width:600px) {
+  body {
+    background-color: rgb(229, 235, 235);
+  }
+
+  .main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .todo-container {
+    border: 1px solid #884d80;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+
+  }
+
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tasks-stats {
+    padding: 12px;
+  }
 }
