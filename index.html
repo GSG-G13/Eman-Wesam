@@ -11,28 +11,24 @@
     <title>ToDo App</title>
   </head>
   <body>
-    <div class="todo-container">
-      <div class="parent_task">
-        <h1 class="header">Welcome to do app!</h1>
-        <div class="add-task">
-          <input type="text" class="text" />
-          <span class="plus">+</span>
-        </div>
-      </div>
-      <div class="task">
-        <!-- <div class="tasks-content">
-          <span class="no-tasks-message">No Tasks To Show</span>
-          <div class="icons">
-            <i class="fa-solid fa-trash delete"></i>
-            <i class="fa-solid fa-pen edit"></i>
+    <div class="main-container">
+      <div class="todo-container">
+        <div class="parent-task">
+          <h1 class="header">Your Task list!</h1>
+          <div class="add-task">
+            <input type="text" class="text" />
+            <span class="plus">+</span>
           </div>
-        </div> -->
-      </div>
-      <div class="task-stats">
-        <div class="tasks-count">Tasks <span class="count-span">0</span></div>
+        </div>
+
+        <div class="tasks"></div>
+        <div class="tasks-stats">
+          <div class="tasks-stats-count">
+            Tasks: <span class="count">0</span>
+          </div>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
-    <!-- <script src="all.min.js"></script> -->
   </body>
 </html>
